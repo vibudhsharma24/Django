@@ -1,16 +1,11 @@
-{%load static%}
 
-<DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>django practice</title>
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-    <!-- <link rel="stylesheet" href="../../static/style.css">  ye ../ se directories back hote hai  -->
 
-</head>
-<body>
-    <h1>Django practice</h1>
-</body>
-</html>
+{% extends "layout.html" %}
+{% block title  %}
+Home Page
+{% endblock  %}
+
+{% block content%}
+<h1>Chai and practice code </h1>
+{% endblock  %}
+{% comment %} ye humne inerit kiya bas "extends likhke" {% endcomment %}

@@ -15,11 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import views ##. is current directory
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'), ##yahan pe basically url handle ho gya hai
     path('about/', views.about, name='about'), ##ye about/ likhna is important matlab har jagah likhna padega except home
     path('contact/', views.contact, name='contact'),
+    path('chai/', include('chai.urls')),  ##ye hamare app vala urls hai
 ] 
